@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Train Schedule</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="assets/css/style.css">
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid" class="top">
+  <div class="container">
+    <h1 class="display-4">Train Schedule</h1>
+    <p class="lead">Stay up to date on the your train's time!</p>
+  </div>
+  </div>
+  <div id="clock"></div>
+
+<table class="table">
+  <thead class="thead-light">Train Schedule</thead>
+    <tr>
+      <th scope="col">Train Name</th>
+      <th scope="col">Destination</th>
+      <th scope="col">Frequency (min)</th>
+      <th scope="col">Next Arrival</th>
+      <th scope="col">Minutes Away</th>
+    </tr>
+    <tr>
+      <td scope="row">Flying Scotsman</td>
+      <td>Edinburgh</td>
+      <td>20</td>
+      <td>3:30</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+<form>
+  <h3 class="addTrainHead">Add Train</h3>
+  <div class="form-group">
+    <label for="exampleInputtext1">Train Name</label>
+    <input type="text" class="form-control" id="trainName-input" aria-describedby="emailHelp" placeholder="Enter Train Name Here">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputtext1">Destination</label>
+    <input type="text" class="form-control" id="destination-input" aria-describedby="emailHelp" placeholder="Enter A Destination">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputtext1">First Train Time (HH:mm - military time)</label>
+    <input type="text" class="form-control" id="startTime-input" aria-describedby="emailHelp" placeholder="Enter First Train Time">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputtext1">Frequency (min)</label>
+    <input type="text" class="form-control" id="frequency-input" aria-describedby="emailHelp" placeholder="Enter the Frequency of the Train">
+  <button type="submit" class="btn btn-primary" id="infoSubmitButton">Submit</button>
+</form>
+
+  </body>
+</html>
